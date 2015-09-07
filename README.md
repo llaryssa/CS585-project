@@ -1,4 +1,4 @@
-# CS585-project
+# CS585-project [![Build Status](https://travis-ci.org/llaryssa/CS585-project.svg?branch=master)](https://travis-ci.org/llaryssa/CS585-project)
 Repository for class assignments of the course CS585
 
 ##Build instructions
@@ -6,7 +6,7 @@ Repository for class assignments of the course CS585
 * $ cd build
 * $ cmake ..
 * $ make
-* $ ./cs585
+* $ ./cs585 **or** ./cs585_test
 
 ##Coding standards
 Please click [here](docs/CodingStandard.md).
