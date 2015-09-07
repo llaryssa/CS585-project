@@ -1,20 +1,22 @@
-cmake_minimum_required ( VERSION 2.8 )
-project ( CS585-project )
+cmake_minimum_required ( VERSION 2.6 )
+project ( cs585 C CXX )
 
-# Version number
-set ( CS585-PROJECT_VERSION_MAJOR 0)
-set ( CS585-PROJECT_VERSION_MINOR 1)
+set( cs585_VERSION_MAJOR 0 )
+set( cs585_VERSION_MINOR 1 )
 
-include_directories( $(PROJECT_SOURCE_DIR)/src)
-add_executable ( CS585-project game.m.cpp )
-
-# GTest
+# GTest libraries
 find_package( GTest REQUIRED )
 find_package( Threads REQUIRED )
+
 include_directories( ${GTEST_INCLUDE_DIRS} )
+include_directories( $(PROJECT_SOURCE_DIR)/src )
 
+# Normal executable
+add_executable( cs585 game.m.cpp )
+
+# Test executable
 set( test_sources ${PROJECT_SOURCE_DIR}/src/test/test0.cpp )
-add_executable( CS585-project_test ${test_sources} )
+add_executable( cs585_test ${test_sources} )
 
-target_link_libraries( CS585-project ${GTEST_BOTH_LIBRARIES} )
-target_link_libraries( CS585-project ${CMAKE_THREAD_LIBS_INIT} )
+target_link_libraries( cs585_test ${GTEST_BOTH_LIBRARIES} )
+target_link_libraries( cs585_test ${CMAKE_THREAD_LIBS_INIT} )
