@@ -1,7 +1,19 @@
- language: cpp
- compiler:
-   - clang
-   - gcc
- before_install:
-  - sudo apt-get update
+language: cpp
+compiler:
+  - clang
+  - gcc
+before_install:
   - sudo apt-get install libgtest-dev
+  - "cd /usr/src/gtest && sudo cmake . && sudo make && sudo mv libgtest* /usr/local/lib/ && cd -"
+before_script:
+  - mkdir build
+  - cd build
+script:
+  - "cmake .. && make"
+  - ./CS585-project_test
+addons:
+  apt:
+    packages:
+      - cmake
+      - libgtest-dev
+      - build-essential
