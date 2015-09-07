@@ -16,7 +16,7 @@ add_executable( cs585 game.m.cpp )
 
 # Test executable
 set( test_sources ${PROJECT_SOURCE_DIR}/src/test/test0.cpp )
-add_executable( cs585_test ${test_sources} )
+add_executable( cs585-test ${test_sources} )
 
 target_link_libraries( cs585_test ${GTEST_BOTH_LIBRARIES} )
 target_link_libraries( cs585_test ${CMAKE_THREAD_LIBS_INIT} )
