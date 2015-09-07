@@ -1,8 +1,11 @@
 cmake_minimum_required ( VERSION 2.8 )
 project ( CS585-project )
 
-include_directories( $(PROJECT_SOURCE_DIR)/src )
+# Version number
+set ( CS585-PROJECT_VERSION_MAJOR 0)
+set ( CS585-PROJECT_VERSION_MINOR 1)
 
+include_directories( $(PROJECT_SOURCE_DIR)/src )
 add_executable ( CS585-project game.m.cpp )
 
 # GTest
