@@ -6,7 +6,7 @@ Repository for class assignments of the course CS585
 * $ cd build
 * $ cmake ..
 * $ make
-* $ ./CS585-project
+* $ ./cs585
 
 ##Coding standards
 Please click [here](docs/CodingStandard.md).
